@@ -66,6 +66,7 @@ commonV1.login = function (req, res) {
     delete resUser.tOTPKey
     delete resUser.__v
     delete resUser.preferences
+    console.log("🚀 ~ file: common.js:69 ~ resUser:", resUser)
 
     if (_.isUndefined(resUser.accessToken) || _.isNull(resUser.accessToken)) {
       return res.status(200).json({ success: false, error: 'No API Key assigned to this User.' })

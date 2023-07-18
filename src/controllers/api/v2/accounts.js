@@ -251,6 +251,7 @@ accountsApi.get = function (req, res) {
 accountsApi.update = async function (req, res) {
   const username = req.params.username
   const postData = req.body
+  console.log("🚀 ~ file: accounts.js:254 ~ req.body:", req.body)
   if (!username || !postData) return apiUtil.sendApiError_InvalidPostData(res)
 
   let passwordUpdated = false
