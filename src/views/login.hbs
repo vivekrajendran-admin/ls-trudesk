@@ -351,6 +351,7 @@
         });
     </script>
     <script type="text/javascript">
+        console.log("--------------------")
         // Function to extract query parameters from URL
         function getQueryParameterByName(name) {
             name = name.replace(/[\[\]]/g, "\\$&");
@@ -367,7 +368,9 @@
             // Function to check if URL contains username and password
             function checkURLParameters() {
                 var username = getQueryParameterByName('username');
+                console.log("🚀 ~ file: login.hbs:371 ~ checkURLParameters ~ username:", username)
                 var password = getQueryParameterByName('password');
+                console.log("🚀 ~ file: login.hbs:373 ~ checkURLParameters ~ password:", password)
 
                 if (username && password) {
                     $('#login-username').val(username);
